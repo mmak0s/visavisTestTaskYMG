@@ -1,0 +1,104 @@
+.mainSlider{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 195px;
+
+    .mainSlider__title{
+        font-size: 50px;
+        line-height: 110%;
+        margin-right: 116px;
+    }
+    .mainSlider_container{
+        position: relative;
+    }
+    .swiper-pagination{
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: -50px;
+    }
+    .swiper-pagination-bullet{
+        background: #C4C4C4;
+        margin-right: 30px;  
+    }
+    .swiper-pagination-bullet-active{
+        background: #4A4D4E;
+    }
+    .mainSlider__slider-nav:focus{
+        outline: none;
+    }
+    .swiper-button-prev:after,
+    .swiper-button-next:after{
+        display: none;
+    }
+    .swiper-button-prev{
+        margin-left: -90px;
+    }
+    .swiper-button-next{
+        margin-right: -90px;
+    }
+
+
+    .mainSlider__slider{
+        position: relative;
+        width: 1140px;
+        height: 460px;
+        box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.06);
+        .mainSlider__slider-wrapper{
+            display: flex;
+            
+            .mainSlider__slider-item{
+                box-sizing: border-box;
+                padding: 70px 40px;
+                width: 360px;
+                height: 460px;
+                background: #FFFFFF;
+                box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.06);
+                border-radius: 20px;
+                .slider-item__header{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 60px;
+
+                    .item__header-figure{
+                        min-width: 70px;
+                        min-height: 70px;
+                        background: #C4C4C4;
+                        border-radius: 50%;
+                        margin-right: 20px;
+                    }
+                    .item__header-title{
+                        font-size: 36px;
+                        line-height: 90%;
+                    }
+                }
+                .slider-item__main{
+                    ul{
+                        li{
+                            box-sizing: border-box;
+                            padding-left: 30px;
+                            list-style-type: none;
+                            position: relative;
+                            font-weight: 300;
+                            font-size: 18px;
+                            line-height: 140%;
+                            margin-bottom: 20px;
+                            &:before{
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                top: 10px;
+                                width: 8px;
+                                height: 8px;
+                                background: #0093E6;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}

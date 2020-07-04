@@ -1,7 +1,18 @@
 @import "mainSlider";
 main{
+    position: relative;
     width: 100%;
     max-width: 100vw;
     box-sizing: border-box;
     padding-top: 240px;
+}
+.mainBackground{
+    position: absolute;
+    top: 480px;
+    left: 41px;
+    width: 100%;
+    height: 100%;
+    max-width: 1725px;
+    max-height: 1300px;
+    background: #F9F9F9;
 }
