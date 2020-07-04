@@ -1,0 +1,30 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Roboto";
+    color: #4A4D4E;
+}
+a{
+    font-family: "Roboto";
+    text-decoration: none;
+    color: #4A4D4E;
+}
+.container{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+@import "fonts";
+@import "header";
+
