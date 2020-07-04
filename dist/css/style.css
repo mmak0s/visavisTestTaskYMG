@@ -271,6 +271,14 @@ header .header__hat .header__hat-nav ul li {
   margin-top: -100px;
 }
 
+main {
+  width: 100%;
+  max-width: 100vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 240px;
+}
+
 .webp .header__main .header__main-top .top__background { background: url(../img/headerBackground.webp) 0 0 no-repeat; }
 
 .webp .header__main .header__main-bottom .bottom__imageBlock { background: url(../img/headerBlock.webp); }
