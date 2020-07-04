@@ -116,6 +116,66 @@ a {
   font-style: italic;
 }
 
+@-webkit-keyframes progressAnimation {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 240px;
+  }
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 240px;
+  }
+}
+
+@-webkit-keyframes progressAnimationMainIconColor {
+  0% {
+    stroke: #4A4D4E;
+  }
+
+  100% {
+    stroke: #0093E6;
+  }
+}
+
+@keyframes progressAnimationMainIconColor {
+  0% {
+    stroke: #4A4D4E;
+  }
+
+  100% {
+    stroke: #0093E6;
+  }
+}
+
+@-webkit-keyframes progressAnimationProgressIconColor {
+  0% {
+    stroke: #B4B4B4;
+  }
+
+  100% {
+    stroke: #0093E6;
+  }
+}
+
+@keyframes progressAnimationProgressIconColor {
+  0% {
+    stroke: #B4B4B4;
+  }
+
+  100% {
+    stroke: #0093E6;
+  }
+}
+
 /*
     HEADER HAT
 */
@@ -234,6 +294,8 @@ header .header__hat .header__hat-nav ul li {
   background: #0093E6;
   border: 0;
   border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .header__main .header__main-bottom .bottom__advantagesBlock {
@@ -518,6 +580,235 @@ header .header__hat .header__hat-nav ul li {
   height: 8px;
   background: #0093E6;
   border-radius: 50%;
+}
+
+.mainProgressBar {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  margin-top: 180px;
+  margin-left: 195px;
+  width: 100%;
+  max-width: 1400px;
+  max-height: 508px;
+}
+
+.mainProgressBar .mainProgressBar__title {
+  position: relative;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 120%;
+  margin-bottom: 100px;
+}
+
+.mainProgressBar .mainProgressBar__title:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  right: -26px;
+  width: 1078px;
+  height: 3px;
+  background: #E5E5E5;
+}
+
+.mainProgressBar .mainProgressBar__progressList {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  margin-left: 130px;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item {
+  position: relative;
+  max-width: 250px;
+  max-height: 180px;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item svg {
+  display: block;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item .mainIcon {
+  margin-bottom: 90px;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item .mainIcon > * {
+  stroke: #4A4D4E;
+  -webkit-transition: stroke .3s;
+  -o-transition: stroke .3s;
+  transition: stroke .3s;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item .progressIcon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 240px;
+  height: 3px;
+  background: #B4B4B4;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 0;
+  height: 3px;
+  background: #0093E6;
+  -webkit-transition: width .3s ease-in-out;
+  -o-transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item .item__content {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item:last-child:before,
+.mainProgressBar .mainProgressBar__progressList .progressList-item:last-child:after {
+  display: none;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item:nth-child(1).animate .mainIcon > * {
+  -webkit-animation: progressAnimationMainIconColor 0.3s ease-in-out forwards;
+          animation: progressAnimationMainIconColor 0.3s ease-in-out forwards;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item:nth-child(1).animate .progressIcon > * {
+  -webkit-animation: progressAnimationProgressIconColor 0.3s ease-in-out forwards;
+          animation: progressAnimationProgressIconColor 0.3s ease-in-out forwards;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item:nth-child(1).animate:after {
+  -webkit-animation: progressAnimation 1s ease-in-out forwards;
+          animation: progressAnimation 1s ease-in-out forwards;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item:nth-child(2).animate .mainIcon > * {
+  -webkit-animation: progressAnimationMainIconColor 0.3s ease-in-out forwards;
+          animation: progressAnimationMainIconColor 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item:nth-child(2).animate .progressIcon > * {
+  -webkit-animation: progressAnimationProgressIconColor 0.3s ease-in-out forwards;
+          animation: progressAnimationProgressIconColor 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item:nth-child(2).animate:after {
+  -webkit-animation: progressAnimation 1s ease-in-out forwards;
+          animation: progressAnimation 1s ease-in-out forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item:nth-child(3).animate .mainIcon > * {
+  -webkit-animation: progressAnimationMainIconColor 0.3s ease-in-out forwards;
+          animation: progressAnimationMainIconColor 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item:nth-child(3).animate .progressIcon > * {
+  -webkit-animation: progressAnimationProgressIconColor 0.3s ease-in-out forwards;
+          animation: progressAnimationProgressIconColor 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item:nth-child(3).animate:after {
+  -webkit-animation: progressAnimation 1s ease-in-out forwards;
+          animation: progressAnimation 1s ease-in-out forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item:nth-child(4).animate .mainIcon > * {
+  -webkit-animation: progressAnimationMainIconColor 0.3s ease-in-out forwards;
+          animation: progressAnimationMainIconColor 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item:nth-child(4).animate .progressIcon > * {
+  -webkit-animation: progressAnimationProgressIconColor 0.3s ease-in-out forwards;
+          animation: progressAnimationProgressIconColor 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item:nth-child(4).animate:after {
+  -webkit-animation: progressAnimation 1s ease-in-out forwards;
+          animation: progressAnimation 1s ease-in-out forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item:nth-child(5).animate .mainIcon > * {
+  -webkit-animation: progressAnimationMainIconColor 0.3s ease-in-out forwards;
+          animation: progressAnimationMainIconColor 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.mainProgressBar .mainProgressBar__progressList .progressList-item:nth-child(5).animate .progressIcon > * {
+  -webkit-animation: progressAnimationProgressIconColor 0.3s ease-in-out forwards;
+          animation: progressAnimationProgressIconColor 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.mainProgressBar .mainProgressBar__action {
+  position: absolute;
+  right: 0;
+  margin-top: 118px;
+  width: 230px;
+  height: 50px;
+  background: #0093E6;
+  border-radius: 10px;
+  border: 0;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 180px;
+}
+
+.mainProgressBar .mainProgressBar__action:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -1040px;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 1010px;
+  height: 3px;
+  background: #E5E5E5;
 }
 
 main {

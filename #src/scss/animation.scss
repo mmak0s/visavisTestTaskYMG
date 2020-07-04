@@ -1,0 +1,25 @@
+@keyframes progressAnimation{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 240px;
+    }
+}
+@keyframes progressAnimationMainIconColor{
+    0%{
+        stroke: #4A4D4E;
+    }
+    100%{
+        stroke: #0093E6;
+    }
+}
+
+@keyframes progressAnimationProgressIconColor{
+    0%{
+        stroke: #B4B4B4;
+    }
+    100%{
+        stroke: #0093E6;
+    }
+}

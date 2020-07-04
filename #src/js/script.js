@@ -1,4 +1,6 @@
 @@include('mainSlider.js');
+@@include('mainProgressBar.js');
+
 function testWebP(callback) {
         var webP = new Image();
         webP.onload = webP.onerror = function () {

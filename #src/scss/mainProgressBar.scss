@@ -1,0 +1,185 @@
+.mainProgressBar{
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 180px;
+    margin-left: 195px;
+    width: 100%;
+    max-width: 1400px;
+    max-height: 508px;
+
+    .mainProgressBar__title{
+        position: relative;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 120%;
+        margin-bottom: 100px;
+
+        &:after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            right: -26px;
+            width: 1078px;
+            height: 3px;
+            background: #E5E5E5;
+        }
+    }
+
+    .mainProgressBar__progressList{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 10px;
+        margin-left: 130px;
+
+        
+
+        .progressList-item{
+            position: relative;
+            max-width: 250px;
+            max-height: 180px;
+
+            svg{
+                display: block;
+            }
+            .mainIcon{
+                margin-bottom: 90px;
+            }
+            .mainIcon>*{
+                stroke: #4A4D4E;
+                transition: stroke .3s;
+            }
+
+            .progressIcon{
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(0, -50%);
+            }
+
+            &:before{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 8px;
+                transform: translate(0, -50%);
+                width: 240px;
+                height: 3px;
+                background: #B4B4B4;
+            }
+            &:after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 8px;
+                transform: translate(0, -50%);
+                width: 0;
+                height: 3px;
+                background: #0093E6;
+                transition: width .3s ease-in-out;
+            }
+
+            .item__content{
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 100%;
+            }
+        }
+        .progressList-item:last-child{
+            &:before, &:after{
+                display: none;
+            }
+        }
+
+        .progressList-item:nth-child(1).animate{
+            .mainIcon>*{
+                animation: progressAnimationMainIconColor 0.3s ease-in-out forwards;
+            }
+            .progressIcon>*{
+                animation: progressAnimationProgressIconColor 0.3s ease-in-out forwards;
+            }
+            &:after{
+                animation: progressAnimation 1s ease-in-out forwards;
+            }
+        }
+        .progressList-item:nth-child(2).animate{
+            .mainIcon>*{
+                animation: progressAnimationMainIconColor 0.3s ease-in-out forwards;
+                animation-delay: 1s;
+            }
+            .progressIcon>*{
+                animation: progressAnimationProgressIconColor 0.3s ease-in-out forwards;
+                animation-delay: 1s;
+            }
+            &:after{
+                animation: progressAnimation 1s ease-in-out forwards;
+                animation-delay: 1s;
+            }
+        }
+        .progressList-item:nth-child(3).animate{
+            .mainIcon>*{
+                animation: progressAnimationMainIconColor 0.3s ease-in-out forwards;
+                animation-delay: 2s;
+            }
+            .progressIcon>*{
+                animation: progressAnimationProgressIconColor 0.3s ease-in-out forwards;
+                animation-delay: 2s;
+            }
+            &:after{
+                animation: progressAnimation 1s ease-in-out forwards;
+                animation-delay: 2s;
+            }
+        }
+        .progressList-item:nth-child(4).animate{
+            .mainIcon>*{
+                animation: progressAnimationMainIconColor 0.3s ease-in-out forwards;
+                animation-delay: 3s;
+            }
+            .progressIcon>*{
+                animation: progressAnimationProgressIconColor 0.3s ease-in-out forwards;
+                animation-delay: 3s;
+            }
+            &:after{
+                animation: progressAnimation 1s ease-in-out forwards;
+                animation-delay: 3s;
+            }
+        }
+        .progressList-item:nth-child(5).animate{
+            .mainIcon>*{
+                animation: progressAnimationMainIconColor 0.3s ease-in-out forwards;
+                animation-delay: 4s;
+            }
+            .progressIcon>*{
+                animation: progressAnimationProgressIconColor 0.3s ease-in-out forwards;
+                animation-delay: 4s;
+            }
+        }
+    }
+    .mainProgressBar__action{
+        position: absolute;
+        right: 0;
+        margin-top: 118px;
+        width: 230px;
+        height: 50px;
+        background: #0093E6;
+        border-radius: 10px;
+        border: 0;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 180px;
+
+        &:before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -1040px;
+            transform: translate(0, -50%);
+            width: 1010px;
+            height: 3px;
+            background: #E5E5E5;
+        }
+    }
+}
+
+
