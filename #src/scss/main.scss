@@ -1,4 +1,5 @@
 @import "mainSlider";
+@import "mainAdvantages";
 main{
     position: relative;
     width: 100%;
@@ -15,4 +16,5 @@ main{
     max-width: 1725px;
     max-height: 1300px;
     background: #F9F9F9;
+    z-index: -1;
 }

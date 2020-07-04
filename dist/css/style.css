@@ -398,6 +398,65 @@ header .header__hat .header__hat-nav ul li {
   border-radius: 50%;
 }
 
+.mainAdvantages {
+  margin-left: 325px;
+  margin-top: 140px;
+  max-width: 1270px;
+  max-height: 389px;
+}
+
+.mainAdvantages .mainAdvantages-title {
+  position: relative;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 100%;
+  margin-bottom: 73px;
+}
+
+.mainAdvantages .mainAdvantages-title:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  right: -9px;
+  width: 854px;
+  height: 3px;
+  background: #0093E6;
+}
+
+.mainAdvantages .mainAdvantages__list {
+  max-width: 1227px;
+  margin-left: 43px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 43px;
+  grid-column-gap: 73px;
+}
+
+.mainAdvantages .mainAdvantages__list .list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainAdvantages .mainAdvantages__list .list-item .item__num {
+  font-size: 50px;
+  line-height: 59px;
+  color: #0093E6;
+  margin-right: 30px;
+}
+
+.mainAdvantages .mainAdvantages__list .list-item .item__content {
+  font-size: 24px;
+  line-height: 140%;
+}
+
 main {
   position: relative;
   width: 100%;
@@ -416,6 +475,7 @@ main {
   max-width: 1725px;
   max-height: 1300px;
   background: #F9F9F9;
+  z-index: -1;
 }
 
 .webp .header__main .header__main-top .top__background { background: url(../img/headerBackground.webp) 0 0 no-repeat; }
