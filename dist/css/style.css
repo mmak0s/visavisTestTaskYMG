@@ -176,6 +176,30 @@ a {
   }
 }
 
+@-webkit-keyframes rotatingElement {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotatingElement {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 /*
     HEADER HAT
 */
@@ -589,8 +613,8 @@ header .header__hat .header__hat-nav ul li {
   margin-top: 180px;
   margin-left: 195px;
   width: 100%;
+  height: 508px;
   max-width: 1400px;
-  max-height: 508px;
 }
 
 .mainProgressBar .mainProgressBar__title {
@@ -795,7 +819,6 @@ header .header__hat .header__hat-nav ul li {
   color: #ffffff;
   font-weight: bold;
   font-size: 18px;
-  margin-bottom: 180px;
 }
 
 .mainProgressBar .mainProgressBar__action:before {
@@ -809,6 +832,143 @@ header .header__hat .header__hat-nav ul li {
   width: 1010px;
   height: 3px;
   background: #E5E5E5;
+}
+
+.mainFirstComponent {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  min-height: 1340px;
+  background: #F9F9F9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 180px;
+  padding-top: 160px;
+}
+
+.mainFirstComponent .container {
+  max-width: 1400px;
+  margin-left: 325px;
+}
+
+.mainFirstComponent .container .mainFirstComponent__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 160px;
+  grid-row-gap: 130px;
+}
+
+.mainFirstComponent .container .mainFirstComponent__list .list-item {
+  position: relative;
+  max-width: 360px;
+  max-height: 400px;
+}
+
+.mainFirstComponent .container .mainFirstComponent__list .list-item .animatedCircle {
+  position: absolute;
+  top: -5px;
+  left: -30px;
+  -webkit-animation: rotatingElement 1s linear;
+          animation: rotatingElement 1s linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.mainFirstComponent .container .mainFirstComponent__list .list-item .item__figure {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #C4C4C4;
+  margin-bottom: 30px;
+}
+
+.mainFirstComponent .container .mainFirstComponent__list .list-item .item__header {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.mainFirstComponent .container .mainFirstComponent__list .list-item .item__content {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 140%;
+  margin-bottom: 20px;
+}
+
+.mainFirstComponent .container .mainFirstComponent__list .list-item .item__list ul li {
+  position: relative;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 20px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 160%;
+  margin-bottom: 8px;
+}
+
+.mainFirstComponent .container .mainFirstComponent__list .list-item .item__list ul li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  background: #0093E6;
+  border-radius: 50%;
+}
+
+.mainFirstComponent .container .mainFirstComponent__list .list-item:first-child .item__figure {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 45px;
+  margin-top: 25px;
+}
+
+.mainFirstComponent .mainFirstComponent__bottomBlock {
+  position: absolute;
+  bottom: -140px;
+  right: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 155px;
+  width: 100%;
+  height: 100%;
+  max-width: 1595px;
+  max-height: 280px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 90px 0;
+  padding-left: 130px;
+  background: #0093E6;
+  border-radius: 30px 0px 0px 30px;
+}
+
+.mainFirstComponent .mainFirstComponent__bottomBlock .bottomBlock-item {
+  max-width: 300px;
+  max-height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainFirstComponent .mainFirstComponent__bottomBlock .bottomBlock-item .item__figure {
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 50%;
+  background: rgba(249, 249, 249, 0.5);
+  margin-right: 20px;
+}
+
+.mainFirstComponent .mainFirstComponent__bottomBlock .bottomBlock-item .item__content {
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 100%;
+  color: #FFFFFF;
 }
 
 main {
