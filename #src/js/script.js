@@ -1,7 +1,7 @@
 @@include('mainSlider.js');
 @@include('mainProgressBar.js');
 @@include('firstComponentBuild.js');
-
+@@include('formValidation.js');
 
 function testWebP(callback) {
         var webP = new Image();

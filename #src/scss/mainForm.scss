@@ -47,7 +47,8 @@
                     &:focus{
                         outline: none;
                         & + label{
-                            top: -20px;
+                            // animation: labelSlide .3s linear forwards;
+                            top: -10px;
                             font-size: 14px;
 
                             span{
@@ -71,6 +72,7 @@
                 }
                 
                 .form__item-error{
+                    display: none;
                     font-size: 12px;
                     line-height: 100%;
                     color: #B4B4B4;

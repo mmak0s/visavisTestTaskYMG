@@ -1,7 +1,7 @@
 <section class="mainForm">
     <h2 class="mainForm__title">Lorem Ipsum is simply dummy text</h2>
     <div class="mainForm__content">
-        <div class="content-form">
+        <form class="content-form" method="POST" id="form">
             <h3 class="form__title">
                 It is a long established 
                 fact that a reader
@@ -9,6 +9,9 @@
             <div class="form__item form__item-name">
                 <input type="text" name="name" id="name" autocomplete="off">
                 <label for="name">Name <span>*</span></label>
+                <div class="form__item-error">
+                    <span>*</span> Lorem Ipsum is simply dummy
+                </div>
             </div>
             <div class="form__bottomItemsContainer">
                 <div class="form__item form__item-phone">
@@ -21,6 +24,9 @@
                 <div class="form__item form__item-email">
                     <input type="text" name="email" id="email" autocomplete="off">
                     <label for="email">Email <span>*</span></label>
+                    <div class="form__item-error">
+                        <span>*</span> Lorem Ipsum is simply dummy
+                    </div>
                 </div>
             </div>
             <div class="form__bottom">
@@ -28,11 +34,11 @@
                     <input type="radio" name="radio" id="radio">
                     <label for="radio">Lorem Ipsum is simply dummy text</label>
                 </div>
-                <button class="bottom-action">
+                <button class="bottom-action" action="submit">
                     Lorem Ipsum
                 </button>
             </div>
-        </div>
+        </form>
         <div class="mainForm__sideInfo">
             <h2 class="sideInfo-title">It is a long established fact that a reader</h2>
             <div class="sideInfo-email">support@email.com</div>
