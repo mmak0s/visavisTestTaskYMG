@@ -919,7 +919,7 @@ header .header__hat .header__hat-nav ul li {
   border-radius: 50%;
 }
 
-.mainFirstComponent .container .mainFirstComponent__list .list-item:first-child .item__figure {
+.mainFirstComponent .container .mainFirstComponent__list .list-item.active-item .item__figure {
   width: 70px;
   height: 70px;
   margin-bottom: 45px;
